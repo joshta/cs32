@@ -53,7 +53,7 @@ class Obfuscator {
         */
         void executeInput(int input) {
             	InputProgramPair* tmp=head;
-		while(tmp->next!=nullptr) {
+		while(tmp!=nullptr) {
 			if(tmp->input==input) {
 				tmp->p->run(input);
 			}
