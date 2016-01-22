@@ -33,6 +33,7 @@ class Program {
 
 /*
 * Represents program that should be execute for specified input value.
+* (Node)
 */
 struct InputProgramPair {
     InputProgramPair* next;
@@ -44,9 +45,85 @@ struct InputProgramPair {
 class Obfuscator {
     private:
         InputProgramPair* head;
-        InputProgramPair* tail;
+     	InputProgramPair* tail;
 
     public:
+        /* Traverses linked list of executable programs and runs on matching input
+        *
+        */
+        void executeInput(int input) {
+            	InputProgramPair* tmp=head;
+		while(tmp->next!=nullptr) {
+			if(tmp->input==input) {
+				tmp->p->run(input);
+			}
+			tmp=tmp->next;
+		}
+        }
+
+        /*
+        * Inserts at end (queue)
+        */
+        void insert(int input, Program *p) {
+		InputProgramPair* val=new InputProgramPair();
+		val->input=input;
+		val->p=p;
+		val->next=nullptr;
+		val->prev=nullptr;
+		//empty list
+		if(head==nullptr) {
+			head=tail=val;
+		}
+		else {
+			val->prev=tail;
+			tail->next=val;
+			tail=val;
+		}
+		
+        }
+       /*
+        * Removes top of stack
+        */
+        void popProgram() {
+		if(head==nullptr) {
+			return;
+		}
+		if(head->next==nullptr) {
+			delete head;
+			head=tail=nullptr;
+		}
+		else {
+			head=head->next;
+			delete head->prev;
+			head->prev=nullptr;
+		}		
+        }
+
+        /*
+        * Add to head of linked list
+        */
+        void pushProgram(int input, Program* p) {
+		InputProgramPair* val=new InputProgramPair();
+		val->input=input;
+		val->p=p;
+		val->next=nullptr;
+		val->prev=nullptr;
+		//empty list
+		if(head==nullptr) {
+			head=tail=val;
+		}
+		else {
+			val->next=head;
+			val->prev=nullptr;
+			head->prev=val;
+			//tail=head;
+			head=val;
+		}
+
+
+
+        }
+
         Obfuscator() {
             cout << "[C] Obfuscator Default constructor" << endl;
             head=nullptr;
@@ -64,41 +141,23 @@ class Obfuscator {
         ~Obfuscator() {
             cout << "[D] Obfuscator Destructor" << endl;
         }
-        /*
-        * Push to top of stack
-        */
-        void pushProgram(int input, Program* p) {
 
-        }
-        /*
-        * Removes top of stack
-        */
-        void popProgram() {
-
-        }
+ 
         /*
         *
         */
         void evaluateAll() {
 
         }
-        /*
-        * Inserts at end of list
-        */
-        void insert(int input, Program *p) {
 
-        }
-        /* Traverses linked list of executable programs and runs on matching input
-        *
-        */
-        void executeInput(int input) {
-            
-        }
+
 };
 
 int main() {
+   Program* p=new Program();
     Obfuscator o1;
-    o1.executeInput(11);
+    o1.pushProgram(11,p);
+    o1.executeInput(1);
 
     return 0;
 }
