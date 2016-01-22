@@ -64,10 +64,28 @@ class Obfuscator {
         ~Obfuscator() {
             cout << "[D] Obfuscator Destructor" << endl;
         }
-        /* Adds (input,program) pair to linked list of executable programs
+        /*
+        * Push to top of stack
+        */
+        void pushProgram(int input, Program* p) {
+
+        }
+        /*
+        * Removes top of stack
+        */
+        void popProgram() {
+
+        }
+        /*
         *
         */
-        void addProgram(InputProgramPair pair) {
+        void evaluateAll() {
+
+        }
+        /*
+        * Inserts at end of list
+        */
+        void insert(int input, Program *p) {
 
         }
         /* Traverses linked list of executable programs and runs on matching input
