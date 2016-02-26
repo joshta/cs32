@@ -1,0 +1,3 @@
+Provide two binary trees that could elicit the preorder traversal print out: 5, 3, 1, 2, 0
+
+Is it possible for a binary search tree to have the postorder traversal print out of: 12, 18, 14, 21, 20, 17
