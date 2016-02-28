@@ -3,5 +3,5 @@ c6 - O(n^2)
 c7 - O(n)
 c8 - log(n)
 c9 - O(n)
-c10 - O(n)
+c10 - O(2^n)
 
