@@ -11,17 +11,17 @@ class HashTable {
 
         //identity function
         unsigned int hash(int toHash) {
-            return 0;
+            return toHash % BUCKETS;                
         }
 
-        unsigned int hash (string toHash) {
+        unsigned int hash (string s) {
             unsigned int h = 2166136261U;
             for (int k = 0; k != s.size(); k++) {
                 h += s[k];
                 h *= 16777619;
             }
 
-            return 0;
+            return h;
         }
 
     public:
@@ -48,12 +48,11 @@ class HashTable {
 int main() {
     HashTable<int> hash;
     hash.insert(5);
-
-    HashTable<string> hash;
-    hash.insert("t");
-    hash.insert("a");
-
-
+    hash.insert(15);
+    hash.insert(25);
+    hash.insert(1);
+    hash.insert(5);
+    hash.insert(11);
     hash.print();
     return 0;
 }
