@@ -24,7 +24,7 @@ struct DropTheBase {
   };
 
   int main () {
-      //DropTheBase b = DerivingMeCrazy();
+      DropTheBase b = DerivingMeCrazy();
       DerivingMeCrazy b=DropTheBase(); 
         
       cout << b.a << endl;

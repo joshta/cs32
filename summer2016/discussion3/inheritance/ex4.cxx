@@ -28,5 +28,5 @@ struct Basically {
       cout << best.b << endl; // 4
       cout << ex.c << endl;   // 5
       cout << ex.d << endl;   // 6
-     // cout << base.d << endl; // 7
+      cout << base.d << endl; // 7
   }
