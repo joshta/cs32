@@ -1,0 +1,14 @@
+http://www.sorting-algorithms.com/
+
+Bubble sort
+
+http://mycodinglab.com/bubble-sort-algorithm/
+
+Insertion sort
+
+http://mycodinglab.com/insertion-sort-algorithm/
+
+
+http://web.cs.ucla.edu/~forns/classes/summer-2015/cs-32/week-5.html
+
+https://joshjdevl.github.io/ucla-forns/classes/winter-2015/cs-32/week-5.html

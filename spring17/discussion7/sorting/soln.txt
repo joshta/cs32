@@ -1,0 +1,9 @@
+sort1 - insertion
+sort2 - selection
+sort3 - insertion
+sort4 - merge
+sort5 - bubble
+sort6 - selection
+sort7 - bubble
+sort8 - bubble
+
