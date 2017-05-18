@@ -1,0 +1,11 @@
+c1 - log(n)
+c2 - n log(n)
+c3 - v1 * v2
+c4 - N * log(M)
+c5 - O(n)
+c6 - O(n^2)
+c7 - O(n)
+c8 - log(n)
+c9 - O(n)
+c10 - O(2^n)
+
