@@ -1,0 +1,7 @@
+check if tree is mirror (symmetric)
+
+http://www.geeksforgeeks.org/symmetric-tree-tree-which-is-mirror-image-of-itself/
+
+https://stackoverflow.com/questions/8436623/check-if-a-binary-tree-is-a-mirror-image-or-symmetric
+
+insert and delete from binary search tree
